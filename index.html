@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gonzalo Abduca Data Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <style>
+    /* About Section */
+    .about-section {
+      text-align: center;
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    .about-section img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .about-section p {
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      padding: 80px 0;
+    }
+    .projects-section h2 {
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .projects-section .card {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: none;
+    }
+    .projects-section .card-img-top {
+      max-height: 180px;
+      object-fit: cover;
+    }
+    .projects-section .card-body {
+      padding: 20px;
+    }
+    .projects-section .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .projects-section .card-text {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+    .skills-section h2 {
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .skills-section .card {
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: none;
+      text-align: center;
+      padding: 20px;
+    }
+    .skills-section .card-img-top {
+      height: 100px;
+      width: auto;
+      margin: 0 auto 20px auto;
+    }
+    .skills-section .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .skills-section .card-text {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 0;
+      background-color: #343a40;
+      color: #fff;
+    }
+    .contact-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .contact-section .social-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .contact-section a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .contact-section a:hover {
+      color: #adb5bd;
+    }
+
+    /* Navbar */
+    .navbar {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-size: 1rem;
+      margin-left: 20px;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #adb5bd !important;
+    }
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background-color: #343a40;
+      }
+      .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Language Switcher */
+    .language-switcher {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .language-switcher button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Gonzalo Abduca Data Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Language Switcher -->
+<div class="language-switcher">
+    <p>Choose your language:</p>
+    <a href="javascript:void(0);" onclick="switchLanguage('en')">
+      <img src="images/flags/english.png" alt="English" class="flag-icon">
+    </a>
+    <a href="javascript:void(0);" onclick="switchLanguage('fr')">
+      <img src="images/flags/french.png" alt="Français" class="flag-icon">
+    </a>
+    <a href="javascript:void(0);" onclick="switchLanguage('es')">
+      <img src="images/flags/spanish.png" alt="Español" class="flag-icon">
+    </a>
+  </div>
+  
+  <style>
+  .language-switcher {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .language-switcher p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .flag-icon {
+    width: 65px; /* Adjust the size as needed */
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .flag-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  </style>
+  </div>
+
+  <!-- About Section - English -->
+  <section id='about' class="about-section language-content" data-lang="en">
+    <div class="container">
+      <h2>About</h2>
+      <img src="images/about/1.jpg" alt="About Me">
+      <p>Hi! I'm Gonzalo, a data analyst with a specialization in business intelligence. Over the course of my career, I've had the opportunity to work in various sectors, including finance, imports and exports, e-commerce, and real estate. These experiences have been instrumental in developing a well-rounded business perspective and adaptability to different challenges.</p>
+      <p>I've had the chance to deepen my expertise in Python and its data analytics libraries, such as pandas, numpy, and matplotlib, while also exploring the field of machine learning. Additionally, I've focused on data visualization and dashboard creation using tools like Streamlit and Power BI, which allows me to transform complex data into actionable insights.</p>
+      <p>If your business is facing challenges that could benefit from data analysis and automation, I'd be happy to explore potential solutions together that align with your specific needs.</p>
+      <a href="#contact" class="btn btn-primary mt-3">Contact Me</a>
+    </div>
+  </section>
+  
+  <!-- About Section - French -->
+  <section id='about-fr' class="about-section language-content" data-lang="fr" style="display:none;">
+    <div class="container">
+      <h2>À Propos</h2>
+      <img src="images/about/1.jpg" alt="À Propos de Moi">
+      <p>Salut ! Je m'appelle Gonzalo, spécialiste en analyse de données et Business Intelligence. Au cours de ma carrière, j'ai eu l'opportunité de travailler dans divers secteurs tels que la finance, les importations et exportations, le commerce électronique, et l'immobilier. Ces expériences variées ont contribué à affiner ma capacité d'adaptation et ma vision globale des affaires.</p>
+    <p>J'ai également eu la chance de développer mes compétences en Python ainsi que dans les bibliothèques d'analyse de données plus utilisées comme pandas, numpy, et matplotlib, en explorant également le domaine du Machine Learning. De plus, je me suis spécialisé dans la visualisation de données et la création de tableaux de bord interactifs, en utilisant des outils comme Streamlit et Power BI, pour transformer des données complexes en informations pratiques.</p>
+    <p>Si vous êtes confronté à des défis que l'analyse de données et l'automatisation pourraient aider à surmonter, je serais heureux d'explorer avec vous des solutions adaptées à vos besoins.</p>
+    <a href="#contact" class="btn btn-primary mt-3">Contactez Moi</a>
+    </div>
+  </section>
+
+  <!-- About Section - Spanish -->
+  <section id='about-es' class="about-section language-content" data-lang="es" style="display:none;">
+    <div class="container">
+      <h2>Acerca de Mí</h2>
+      <img src="images/about/1.jpg" alt="Acerca de Mí">
+      <p>¡Hola! Soy Gonzalo, analista de datos con especialización en Business Intelligence. A lo largo de mi carrera, he tenido la oportunidad de trabajar en diversos sectores como finanzas, importaciones y exportaciones, comercio electrónico y en el sector inmobiliario. Estas experiencias han sido clave para desarrollar una visión integral y una capacidad de adaptación y flexibilidad en diferentes contextos empresariales.</p>
+      <p>Tambien, he tenido la posibilidad de profundizar mis conocimientos en Python y en las biliotecas de análisis de datos mas utilizadas, como pandas, numpy y matplotlib, como tambien en Machine Learning. Además, me he especializado en la visualización de datos y en la creación de dashboards interactivos con herramientas como Streamlit y Power BI, lo que me permite transformar datos complejos en información útil para la toma de decisiones.</p>
+      <p>Si su empresa enfrenta desafíos que puedan ser superados a través del análisis de datos y la automatización, estaré encantado de explorar juntos soluciones que se adapten a sus necesidades específicas.</p><a href="#contact" class="btn btn-primary mt-3">Contáctame</a>
+    </div>
+  </section>
+
+  <!-- Projects Section - English -->
+  <section id="projects" class="projects-section language-content" data-lang="en">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/1.png" class="card-img-top" alt="Risk Management Trading App">
+            <div class="card-body">
+              <h5 class="card-title">Risk Management Trading App</h5>
+              <p class="card-text">This application is designed to assist retail investors in assessing the risk associated with their investments in financial markets. The app breaks down key statistics for each asset and automatically calculates the optimal position size, empowering investors to make informed decisions and manage risk effectively.</p>
+              <a href="https://rmtradingapp.streamlit.app/" class="btn btn-primary">Enter the app</a>
+              <a href="https://github.com/gonzaloabduca/riskmanagement" class="btn btn-secondary">Repository</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/2.png" class="card-img-top" alt="Spain Real Estate Market Analysis">
+            <div class="card-body">
+              <h5 class="card-title">Spain Real Estate Market Analysis</h5>
+              <p class="card-text">In collaboration with the renowned real estate company Prop Hero, I conducted an in-depth analysis of the Spanish real estate market. This project involved developing a model that identifies the most promising investment opportunities across Spain, guiding investors toward areas with the highest potential for development.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/3.png" class="card-img-top" alt="Airbnb Room Price Prediction">
+            <div class="card-body">
+              <h5 class="card-title">Airbnb Room Price Prediction</h5>
+              <p class="card-text">This project involved exploring various machine learning regression models to accurately predict room prices on the Airbnb platform. The goal was to develop a pricing strategy that ensures competitive pricing while maintaining fairness in the market, ultimately helping hosts optimize their listings.</p>
+              <a href="https://github.com/gonzaloabduca/airbnb_room_price/blob/main/11157248735_Gonzalo_Abduca_exploitationdesdonn%C3%A9es_datederendu.ipynb" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section - French -->
+  <section id="projects-fr" class="projects-section language-content" data-lang="fr" style="display:none;">
+    <div class="container">
+      <h2>Projets</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/1.png" class="card-img-top" alt="Application de Gestion des Risques de Trading">
+            <div class="card-body">
+              <h5 class="card-title">Application de Gestion des Risques de Trading</h5>
+              <p class="card-text">Cette application est conçue pour aider les investisseurs particuliers à évaluer le risque associé à leurs investissements sur les marchés financiers. L'application décompose les statistiques clés pour chaque actif et calcule automatiquement la taille de position optimale, permettant aux investisseurs de prendre des décisions éclairées et de gérer efficacement le risque.</p>
+              <a href="https://rmtradingapp.streamlit.app/" class="btn btn-primary">Entrer dans l'application</a>
+              <a href="https://github.com/gonzaloabduca/riskmanagement" class="btn btn-secondary">Dépôt</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/2.png" class="card-img-top" alt="Analyse du Marché Immobilier en Espagne">
+            <div class="card-body">
+              <h5 class="card-title">Analyse du Marché Immobilier en Espagne</h5>
+              <p class="card-text">En collaboration avec la société immobilière renommée Prop Hero, j'ai mené une analyse approfondie du marché immobilier espagnol. Ce projet a consisté à développer un modèle permettant d'identifier les opportunités d'investissement les plus prometteuses à travers l'Espagne, guidant les investisseurs vers les zones présentant le plus grand potentiel de développement.</p>
+              <a href="#" class="btn btn-primary">Article de Blog</a>
+              <a href="#" class="btn btn-secondary">Code Source</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/3.png" class="card-img-top" alt="Prédiction du Prix des Chambres Airbnb">
+            <div class="card-body">
+              <h5 class="card-title">Prédiction du Prix des Chambres Airbnb</h5>
+              <p class="card-text">Ce projet consistait à explorer divers modèles de régression en apprentissage automatique pour prédire avec précision les prix des chambres sur la plateforme Airbnb. L'objectif était de développer une stratégie de tarification qui assure une tarification compétitive tout en maintenant l'équité sur le marché, aidant ainsi les hôtes à optimiser leurs annonces.</p>
+              <a href="https://github.com/gonzaloabduca/airbnb_room_price/blob/main/11157248735_Gonzalo_Abduca_exploitationdesdonn%C3%A9es_datederendu.ipynb" class="btn btn-secondary">Code Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section - Spanish -->
+  <section id="projects-es" class="projects-section language-content" data-lang="es" style="display:none;">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/1.png" class="card-img-top" alt="Aplicación de Gestión de Riesgos en Trading">
+            <div class="card-body">
+              <h5 class="card-title">Aplicación de Gestión de Riesgos en Trading</h5>
+              <p class="card-text">Esta aplicación está diseñada para ayudar a los inversores minoristas a evaluar el riesgo asociado con sus inversiones en los mercados financieros. La aplicación desglosa las estadísticas clave de cada activo y calcula automáticamente el tamaño de posición óptimo, lo que permite a los inversores tomar decisiones informadas y gestionar el riesgo de manera efectiva.</p>
+              <a href="https://rmtradingapp.streamlit.app/" class="btn btn-primary">Entrar en la aplicación</a>
+              <a href="https://github.com/gonzaloabduca/riskmanagement" class="btn btn-secondary">Repositorio</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/2.png" class="card-img-top" alt="Análisis del Mercado Inmobiliario en España">
+            <div class="card-body">
+              <h5 class="card-title">Análisis del Mercado Inmobiliario en España</h5>
+              <p class="card-text">En colaboración con la reconocida empresa inmobiliaria Prop Hero, realicé un análisis en profundidad del mercado inmobiliario español. Este proyecto consistió en desarrollar un modelo que identifica las oportunidades de inversión más prometedoras en toda España, guiando a los inversores hacia las áreas con mayor potencial de desarrollo.</p>
+              <a href="#" class="btn btn-primary">Entrada de Blog</a>
+              <a href="#" class="btn btn-secondary">Código Fuente</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/3.png" class="card-img-top" alt="Predicción de Precios de Habitaciones en Airbnb">
+            <div class="card-body">
+              <h5 class="card-title">Predicción de Precios de Habitaciones en Airbnb</h5>
+              <p class="card-text">Este proyecto involucró la exploración de varios modelos de regresión de aprendizaje automático para predecir con precisión los precios de las habitaciones en la plataforma Airbnb. El objetivo era desarrollar una estrategia de precios que garantice precios competitivos manteniendo la equidad en el mercado, ayudando a los anfitriones a optimizar sus listados.</p>
+              <a href="https://github.com/gonzaloabduca/airbnb_room_price/blob/main/11157248735_Gonzalo_Abduca_exploitationdesdonn%C3%A9es_datederendu.ipynb" class="btn btn-secondary">Código Fuente</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section - English -->
+  <section id="skills" class="skills-section language-content" data-lang="en">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="row">
+        <!-- Skill 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/1.png" class="card-img-top" alt="Python">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">I leverage Python to analyze business data and create models that empower companies to make informed, data-driven decisions.</p>
+              <a href="#" class="btn btn-outline-primary">View Certification</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+            <div class="card-body">
+              <h5 class="card-title">Data Visualization</h5>
+              <p class="card-text">I bring data to life by creating insightful visualizations using tools like Tableau and Matplotlib, and I also build interactive applications with Streamlit to help businesses explore their data more effectively.</p>
+              <a href="#" class="btn btn-outline-primary">View Projects</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+            <div class="card-body">
+              <h5 class="card-title">SQL</h5>
+              <p class="card-text">I excel at writing complex SQL queries and managing databases, ensuring that businesses can access and leverage their data efficiently for better decision-making.</p>
+              <a href="#" class="btn btn-outline-primary">View Certification</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/4.png" class="card-img-top" alt="Business Intelligence">
+            <div class="card-body">
+              <h5 class="card-title">Business Intelligence</h5>
+              <p class="card-text">I specialize in transforming raw data into actionable insights using advanced Business Intelligence tools. My goal is to empower businesses to make strategic decisions based on comprehensive data analysis and visualization.</p>
+              <a href="#" class="btn btn-outline-primary">View Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section - French -->
+  <section id="skills-fr" class="skills-section language-content" data-lang="fr" style="display:none;">
+    <div class="container">
+      <h2>Compétences</h2>
+      <div class="row">
+        <!-- Skill 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/1.png" class="card-img-top" alt="Python">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Je maîtrise Python pour analyser les données commerciales et créer des modèles qui permettent aux entreprises de prendre des décisions éclairées et basées sur les données.</p>
+              <a href="#" class="btn btn-outline-primary">Voir la Certification</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/2.png" class="card-img-top" alt="Visualisation des Données">
+            <div class="card-body">
+              <h5 class="card-title">Visualisation des Données</h5>
+              <p class="card-text">Je donne vie aux données en créant des visualisations perspicaces à l'aide d'outils tels que Tableau et Matplotlib, et je construis également des applications interactives avec Streamlit pour aider les entreprises à explorer leurs données plus efficacement.</p>
+              <a href="#" class="btn btn-outline-primary">Voir les Projets</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+            <div class="card-body">
+              <h5 class="card-title">SQL</h5>
+              <p class="card-text">Je suis expert en rédaction de requêtes SQL complexes et en gestion de bases de données, garantissant que les entreprises peuvent accéder à leurs données et les exploiter efficacement pour une meilleure prise de décision.</p>
+              <a href="#" class="btn btn-outline-primary">Voir la Certification</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/4.png" class="card-img-top" alt="Business Intelligence">
+            <div class="card-body">
+              <h5 class="card-title">Business Intelligence</h5>
+              <p class="card-text">Je me spécialise dans la transformation des données brutes en informations exploitables à l'aide d'outils avancés de Business Intelligence. Mon objectif est de permettre aux entreprises de prendre des décisions stratégiques basées sur une analyse de données complète et une visualisation approfondie.</p>
+              <a href="#" class="btn btn-outline-primary">Voir les Projets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section - Spanish -->
+  <section id="skills-es" class="skills-section language-content" data-lang="es" style="display:none;">
+    <div class="container">
+      <h2>Habilidades</h2>
+      <div class="row">
+        <!-- Skill 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/1.png" class="card-img-top" alt="Python">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Utilizo Python para analizar datos comerciales y crear modelos que permiten a las empresas tomar decisiones informadas basadas en datos.</p>
+              <a href="#" class="btn btn-outline-primary">Ver Certificación</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/2.png" class="card-img-top" alt="Visualización de Datos">
+            <div class="card-body">
+              <h5 class="card-title">Visualización de Datos</h5>
+              <p class="card-text">Doy vida a los datos creando visualizaciones perspicaces utilizando herramientas como Tableau y Matplotlib, y también construyo aplicaciones interactivas con Streamlit para ayudar a las empresas a explorar sus datos de manera más efectiva.</p>
+              <a href="#" class="btn btn-outline-primary">Ver Proyectos</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+            <div class="card-body">
+              <h5 class="card-title">SQL</h5>
+              <p class="card-text">Soy experto en redactar consultas SQL complejas y en gestionar bases de datos, asegurando que las empresas puedan acceder a sus datos y aprovecharlos de manera eficiente para tomar mejores decisiones.</p>
+              <a href="#" class="btn btn-outline-primary">Ver Certificación</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/4.png" class="card-img-top" alt="Inteligencia Empresarial">
+            <div class="card-body">
+              <h5 class="card-title">Inteligencia Empresarial</h5>
+              <p class="card-text">Me especializo en transformar datos brutos en información procesable utilizando herramientas avanzadas de inteligencia empresarial. Mi objetivo es permitir que las empresas tomen decisiones estratégicas basadas en un análisis de datos exhaustivo y una visualización profunda.</p>
+              <a href="#" class="btn btn-outline-primary">Ver Proyectos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <p><i class="fas fa-envelope"></i> <a href="mailto:abducagonzalo@gmail.com">abducagonzalo@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+33 0768087905">+33 0768087905</a></p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <!-- LinkedIn -->
+        <div class="col-md-2 col-4 mb-3">
+          <a href="https://linkedin.com/in/gonzaloabduca" target="_blank">
+            <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+            LinkedIn
+          </a>
+        </div>
+        <!-- GitHub -->
+        <div class="col-md-2 col-4 mb-3">
+          <a href="https://github.com/gonzaloabduca" target="_blank">
+            <img src="icons/github.png" alt="GitHub" class="social-icon">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Language Switcher Script -->
+  <script>
+    function switchLanguage(lang) {
+      const allSections = document.querySelectorAll('.language-content');
+      allSections.forEach(section => {
+        section.style.display = section.dataset.lang === lang ? 'block' : 'none';
+      });
+    }
+    
+    // Default to English
+    switchLanguage('en');
+  </script>
+
+</body>
+</html>
